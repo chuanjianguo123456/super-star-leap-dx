@@ -1,0 +1,15 @@
+# dependencies (tools/ only - the game itself has none)
+node_modules/
+**/node_modules/
+
+# test artefacts
+tools/paths.json
+tools/*.png
+tools/package-lock.json
+
+# local screenshots / scratch
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

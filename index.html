@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Super Star Leap DX</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="description" content="Super Star Leap DX - a deluxe, tablet-friendly platformer made with plain HTML5 canvas. No assets, no dependencies.">
+<meta name="theme-color" content="#16213e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game" aria-label="Game"></canvas>
+
+  <div id="topbtns">
+    <button id="btnPause" class="round" aria-label="Pause"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="5" y="4" width="5" height="16" rx="1.5" fill="#fff"/><rect x="14" y="4" width="5" height="16" rx="1.5" fill="#fff"/></svg></button>
+    <button id="btnFs" class="round" aria-label="Fullscreen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </div>
+
+  <div id="touch" aria-hidden="true">
+    <div id="padInfo">
+      <strong data-i18n="tabletReady"></strong>
+      <span data-i18n="tabletPadHint"></span>
+    </div>
+    <div class="cluster left">
+      <button class="tb" id="bLeft" data-btn="left" aria-label="Left"><svg viewBox="0 0 24 24" width="46%" height="46%" aria-hidden="true"><path d="M16 4 7 12l9 8z" fill="#fff" stroke="rgba(10,14,40,.7)" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+      <button class="tb" id="bRight" data-btn="right" aria-label="Right"><svg viewBox="0 0 24 24" width="46%" height="46%" aria-hidden="true"><path d="M8 4l9 8-9 8z" fill="#fff" stroke="rgba(10,14,40,.7)" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+    </div>
+    <div class="cluster right">
+      <div class="col">
+        <button class="tb sm" id="bDown" data-btn="down" aria-label="Down"><svg viewBox="0 0 24 24" width="46%" height="46%" aria-hidden="true"><path d="M4 8l8 9 8-9z" fill="#fff" stroke="rgba(10,14,40,.7)" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+        <button class="tb" id="bRun" data-btn="run">B</button>
+      </div>
+      <button class="tb big" id="bJump" data-btn="jump">A</button>
+    </div>
+  </div>
+
+  <div id="screens">
+    <section id="sc-title" class="screen">
+      <div class="logo"><span class="l1">SUPER</span><span class="l2">STAR LEAP</span><span class="l3">DX</span></div>
+      <p class="tag" data-i18n="tagline"></p>
+      <p class="tablet-tag" data-i18n="tabletBadge"></p>
+      <div class="menu">
+        <button class="btn primary" id="btnPlay" data-i18n="play"></button>
+        <button class="btn" id="btnLevels" data-i18n="levels"></button>
+        <button class="btn" id="btnSettings" data-i18n="settings"></button>
+        <button class="btn subtle" id="btnHelp" data-i18n="controls"></button>
+      </div>
+      <p class="hint" data-i18n="hint"></p>
+    </section>
+
+    <section id="sc-select" class="screen hidden">
+      <h2 data-i18n="levels"></h2>
+      <div id="grid"></div>
+      <div class="menu row"><button class="btn" id="btnSelBack" data-i18n="back"></button></div>
+    </section>
+
+    <section id="sc-settings" class="screen hidden">
+      <h2 data-i18n="settings"></h2>
+      <div id="setList" class="panel"></div>
+      <div class="menu row">
+        <button class="btn danger" id="btnReset" data-i18n="reset"></button>
+        <button class="btn primary" id="btnSetBack" data-i18n="back"></button>
+      </div>
+    </section>
+
+    <section id="sc-help" class="screen hidden">
+      <h2 data-i18n="controls"></h2>
+      <div class="panel help-panel">
+        <div><h3 data-i18n="helpTouchTitle"></h3><p data-i18n="helpTouch"></p></div>
+        <div><h3 data-i18n="helpMovesTitle"></h3><p data-i18n="helpMoves"></p></div>
+        <div><h3 data-i18n="helpTabletTitle"></h3><p data-i18n="helpTablet"></p></div>
+        <div><h3 data-i18n="helpKeysTitle"></h3><p data-i18n="helpKeys"></p></div>
+      </div>
+      <div class="menu row"><button class="btn primary" id="btnHelpBack" data-i18n="back"></button></div>
+    </section>
+
+    <section id="sc-pause" class="screen hidden">
+      <h2 data-i18n="paused"></h2>
+      <div class="menu">
+        <button class="btn primary" id="btnResume" data-i18n="resume"></button>
+        <button class="btn" id="btnRestart" data-i18n="restart"></button>
+        <button class="btn" id="btnPauseSet" data-i18n="settings"></button>
+        <button class="btn subtle" id="btnPauseHelp" data-i18n="controls"></button>
+        <button class="btn" id="btnQuit" data-i18n="quit"></button>
+      </div>
+    </section>
+
+    <section id="sc-clear" class="screen hidden">
+      <h2 data-i18n="clear"></h2>
+      <div id="clearStats" class="panel stats"></div>
+      <div class="menu row">
+        <button class="btn" id="btnClearSel" data-i18n="quit"></button>
+        <button class="btn primary" id="btnNext" data-i18n="next"></button>
+      </div>
+    </section>
+
+    <section id="sc-over" class="screen hidden">
+      <h2 class="bad" data-i18n="gameover"></h2>
+      <div class="menu">
+        <button class="btn primary" id="btnRetry" data-i18n="retry"></button>
+        <button class="btn" id="btnOverSel" data-i18n="quit"></button>
+      </div>
+    </section>
+
+    <section id="sc-end" class="screen hidden">
+      <h2 data-i18n="endTitle"></h2>
+      <p class="tag" data-i18n="endText"></p>
+      <div id="endStats" class="panel stats"></div>
+      <div class="menu"><button class="btn primary" id="btnEndSel" data-i18n="quit"></button></div>
+    </section>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/tablet.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/input.js"></script>
+<script src="js/gfx_bg.js"></script>
+<script src="js/gfx_sprites.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/world.js"></script>
+<script src="js/actors.js"></script>
+<script src="js/boss.js"></script>
+<script src="js/sim.js"></script>
+<script src="js/sim2.js"></script>
+<script src="js/gfx_items.js"></script>
+<script src="js/game.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
