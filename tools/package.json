@@ -1,11 +1,11 @@
 {
   "name": "super-star-leap-dx-tools",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Headless verification tools for Super Star Leap DX (Skia canvas + DOM shim, runs the game's real scripts).",
   "type": "commonjs",
   "scripts": {
-    "test": "node lint-levels.cjs && node plan.cjs && node medals.cjs medal && node flow.cjs && node boss.cjs && node mech.cjs && node audit-fixes.cjs && node polish.cjs && node records.cjs && node tablet-layout.cjs && node tablet-input.cjs",
+    "test": "node lint-levels.cjs && node plan.cjs && node medals.cjs medal && node flow.cjs && node boss.cjs && node mech.cjs && node audit-fixes.cjs && node polish.cjs && node records.cjs && node tablet-layout.cjs && node tablet-input.cjs && node playability.cjs && npm run playtest",
     "lint": "node lint-levels.cjs",
     "plan": "node plan.cjs",
     "medals": "node medals.cjs medal",
@@ -17,7 +17,8 @@
     "fixes": "node audit-fixes.cjs",
     "polish": "node polish.cjs",
     "records": "node records.cjs",
-    "tablet": "node tablet-layout.cjs && node tablet-input.cjs"
+    "tablet": "node tablet-layout.cjs && node tablet-input.cjs",
+    "playtest": "node full-playtest.cjs playtests/tutorial-route.json && node full-playtest.cjs playtests/cavern-route.json && node full-playtest.cjs playtests/snow-route.json && node full-playtest.cjs playtests/cloud-route.json"
   },
   "devDependencies": {
     "@napi-rs/canvas": "^1.0.0"

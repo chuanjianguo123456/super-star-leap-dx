@@ -7,7 +7,7 @@
   SSL.TS = 32;          // tile size in world units
   SSL.VH = 15;          // view height in tiles
   SSL.DT = 1 / 60;      // fixed simulation step
-  SSL.VERSION = '1.1.0-tablet';
+  SSL.VERSION = '1.1.1-playability';
 
   SSL.clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
   SSL.lerp = (a, b, t) => a + (b - a) * t;
@@ -73,7 +73,7 @@
       bossHint: 'Stomp Drakon or burn him with fireballs!', bossRage: 'Drakon is furious!', getReady: 'Get ready!',
       cMushroom: 'Super!', cFire: 'Fire power!', cStar: 'Starlight!',
       fullscreen: 'Fullscreen', pause: 'Pause', installed: 'Works offline once loaded',
-      controls: 'How to play', tabletBadge: 'TABLET EDITION · landscape / portrait · multi-touch',
+      controls: 'How to play', tabletBadge: 'v1.1.1 · improved tap jumps · tablet controls',
       tabletReady: 'TWO-HAND PLAY', tabletPadHint: 'A · jump   B · run / fire   ▼ + A · drop',
       padLayout: 'Landscape controls', dock: 'Separate deck', overlay: 'Over game',
       padOpacity: 'Button opacity', padHeight: 'Controls height', low: 'Low', mid: 'Mid', high: 'High',
@@ -102,7 +102,7 @@
       bossHint: '踩德拉肯的头，或者用火球烧他！', bossRage: '德拉肯暴怒了！', getReady: '准备！',
       cMushroom: '变大！', cFire: '火焰力量！', cStar: '无敌星光！',
       fullscreen: '全屏', pause: '暂停', installed: '加载后可离线游玩',
-      controls: '操作说明', tabletBadge: '平板适配版 · 横竖屏自适应 · 多指同按',
+      controls: '操作说明', tabletBadge: 'v1.1.1 · 短按跳跃已改善 · 平板适配',
       tabletReady: '双手畅玩', tabletPadHint: 'A 跳跃　B 加速 / 火球　▼ + A 下穿',
       padLayout: '横屏操作区', dock: '独立面板', overlay: '悬浮按键',
       padOpacity: '按键透明度', padHeight: '按键位置', low: '靠下', mid: '居中', high: '靠上',

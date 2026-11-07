@@ -1,0 +1,357 @@
+{
+  "level": 1,
+  "seed": 12345,
+  "note": "Complete original enemies, items and damage; only input actions are replayed. Fixed RNG is test reproducibility, not reduced difficulty.",
+  "path": [
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 43
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 33
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": -1,
+      "run": false,
+      "jump": false,
+      "hold": 0,
+      "f": 8
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 44
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 18,
+      "f": 40
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 75
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 80
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 18,
+      "f": 40
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 100
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": false,
+      "hold": 0,
+      "f": 8
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 87
+    },
+    {
+      "dir": 0,
+      "run": false,
+      "jump": true,
+      "hold": 18,
+      "f": 40
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 44
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 43
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 53
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 77
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 33
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": false,
+      "hold": 0,
+      "f": 8
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 73
+    },
+    {
+      "dir": 0,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 44
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 18,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 35
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 44
+    }
+  ]
+}

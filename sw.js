@@ -1,7 +1,7 @@
 /* Super Star Leap DX - service worker.
    Stale-while-revalidate: the game loads from cache (works offline) and the cache is refreshed in the background.
    The cache name is versioned whenever code/assets change, including the tablet layout module. */
-const CACHE = 'ssl-dx-v1.1-tablet';
+const CACHE = 'ssl-dx-v1.1.1-playability';
 const FILES = [
   './',
   './index.html',

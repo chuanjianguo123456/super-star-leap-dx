@@ -6,7 +6,7 @@
   const P = SSL.PHYS = {
     walk: 150, run: 232, accG: 1500, accA: 1050, frG: 1800, frA: 260, accI: 300, frI: 170,
     jump: 600, jumpBoost: 0.12, gUp: 1500, gCut: 3700, gDown: 2300, vMax: 740,
-    coyote: 0.1, buffer: 0.14, stompBounce: 440, spring: 1000, pound: 1000,
+    coyote: 0.12, buffer: 0.16, minJumpHold: 0.16, stompBounce: 440, spring: 1000, pound: 1000,
     hSmall: 30, hBig: 52, w: 20,
   };
 
@@ -17,7 +17,7 @@
     this.vx = 0; this.vy = 0; this.face = 1;
     this.onGround = false; this.ride = null; this.groundTile = 0; this.onOneWay = false;
     this.pow = 0; this.crouch = false; this.pound = 0; this.poundT = 0;
-    this.coyote = 0; this.buffer = 0; this.dropT = 0;
+    this.coyote = 0; this.buffer = 0; this.dropT = 0; this.jumpHoldT = 0;
     this.invuln = 0; this.starT = 0; this.hurtT = 0; this.fireCd = 0;
     this.runPhase = 0; this.sq = 0; this.look = 0;
     this.dead = false; this.deadT = 0; this.stompChain = 0; this.growT = 0; this.jumping = false;
@@ -81,6 +81,7 @@
     this.growT = Math.max(0, this.growT - dt);
     this.fireCd = Math.max(0, this.fireCd - dt);
     this.dropT = Math.max(0, this.dropT - dt);
+    this.jumpHoldT = Math.max(0, this.jumpHoldT - dt);
     if (this.starT > 0) { this.starT -= dt; if (Math.random() < 0.5) W.sparkle(this.x + Math.random() * this.w, this.y + Math.random() * this.h); }
 
     // crouch (big only)
@@ -113,7 +114,7 @@
       this.dropT = 0.22; this.onGround = false; this.ride = null; this.buffer = 0; this.y += 2; this.coyote = 0;
     } else if (this.buffer > 0 && this.coyote > 0 && !this.pound) {
       this.vy = -(P.jump + Math.abs(this.vx) * P.jumpBoost);
-      this.onGround = false; this.ride = null; this.buffer = 0; this.coyote = 0; this.sq = -0.9; this.jumping = true;
+      this.onGround = false; this.ride = null; this.buffer = 0; this.coyote = 0; this.sq = -0.9; this.jumping = true; this.jumpHoldT = P.minJumpHold;
       W.sfx(this.pow ? 'jumpBig' : 'jump'); W.puff(this.x + this.w / 2, this.y + this.h, 3, 'rgba(255,255,255,.7)', 0.5);
     }
 
@@ -128,7 +129,7 @@
 
     // gravity
     if (this.pound !== 1) {
-      const g = this.pound === 2 ? 0 : (this.vy < 0 ? ((inp.jump || !this.jumping) ? P.gUp : P.gCut) : P.gDown);
+      const g = this.pound === 2 ? 0 : (this.vy < 0 ? ((inp.jump || this.jumpHoldT > 0 || !this.jumping) ? P.gUp : P.gCut) : P.gDown);
       this.vy = Math.min(this.pound === 2 ? P.pound : P.vMax, this.vy + g * dt);
     }
 

@@ -1,6 +1,6 @@
 {
   "name": "super-star-leap-dx",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "A deluxe, tablet-friendly platformer built with plain HTML5 canvas and Web Audio. No assets, no runtime dependencies.",
   "keywords": [
@@ -29,7 +29,8 @@
     "fixes": "cd tools && node audit-fixes.cjs",
     "polish": "cd tools && node polish.cjs",
     "records": "cd tools && node records.cjs",
-    "tablet": "cd tools && node tablet-layout.cjs && node tablet-input.cjs"
+    "tablet": "cd tools && node tablet-layout.cjs && node tablet-input.cjs",
+    "playtest": "cd tools && npm run playtest"
   },
   "engines": {
     "node": ">=18"

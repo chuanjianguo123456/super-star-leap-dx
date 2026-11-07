@@ -71,13 +71,14 @@
   (function () {
     const b = new LB({ id: 0, w: 214, world: '1-1', theme: 'meadow', time: 320,
       name: { en: 'Sunny Meadow', zh: '阳光草原' }, desc: { en: 'Learn the ropes', zh: '新手教学' } });
-    b.ground(0, 214); b.pit(58, 3); b.pit(98, 4); b.pit(150, 3); b.pit(176, 3);
+    // Tutorial route: comfortable walking jumps; wider running jumps belong in later worlds.
+    b.ground(0, 214); b.pit(58, 2); b.pit(98, 2); b.pit(150, 2); b.pit(176, 2);
     b.sign(4, { en: 'Move left / right', zh: '左右移动' }).sign(11, { en: 'A = Jump (hold = higher)', zh: 'A 跳跃（按住更高）' })
       .sign(29.5, { en: 'Stomp from above!', zh: '从上方踩敌人！' }).sign(49, { en: 'Hold B to run', zh: '按住 B 加速跑' });
     // intro blocks
     b.q(14, 9, 'coin').brick(16, 9).q(17, 9, 'power').brick(18, 9).q(19, 9, 'coin');
     b.coins(22, 11, 3).enemy('grumblet', 24).enemy('grumblet', 32).enemy('grumblet', 34);
-    b.pipe(27, 2).pipe(38, 3).coin(38, 8).coin(39, 8).medal(38, 6);
+    b.pipe(27, 2).pipe(38, 2).plat(36, 10, 2).coin(38, 8).coin(39, 8).medal(38, 6);
     b.hidden(45, 8, '1up');
     // first pit + stairs
     b.arc(56, 11, 7, 3).enemy('grumblet', 52);
@@ -92,7 +93,11 @@
     b.bricks(122, 9, 5).q(124, 5, 'star');
     b.plat(129, 10, 3).plat(133, 8, 3).plat(137, 6, 3).medal(138, 3).coins(129, 9, 3).coins(133, 7, 3);
     b.enemy('hopper', 133).enemy('hopper', 141);
-    b.pipe(143, 2).pipe(147, 4);
+    // No compulsory four-tile wall: a novice who misses the first pipe can still recover from the ground.
+    b.pipe(143, 2).pipe(147, 2);
+    b.sign(144.5, { en: 'Release A, then jump again', zh: '松开 A，再按可连续跳' });
+    // An obvious optional high route keeps the old pipe-top medal reachable.
+    b.plat(145, 10, 2);
     b.arc(149, 11, 5, 3);
     b.enemy('shelly', 156).enemy('grumblet', 160).enemy('grumblet', 162).q(160, 9, 'coin').q(161, 9, 'coin');
     b.coins(172, 11, 3);
@@ -107,10 +112,11 @@
     const b = new LB({ id: 1, w: 226, world: '1-2', theme: 'cave', time: 340, music: 'cave',
       name: { en: 'Crystal Caverns', zh: '水晶洞窟' }, desc: { en: 'Bats, spikes and springs', zh: '蝙蝠、尖刺和弹簧' } });
     b.ground(0, 226); b.ceiling(0, 226, 1);
-    b.pit(46, 4); b.pit(84, 5); b.pit(118, 6); b.pit(160, 4); b.pit(196, 4);
+    b.pit(46, 3); b.pit(84, 5); b.pit(118, 6); b.pit(160, 3); b.pit(196, 3);
     b.q(10, 9, 'coin').brick(12, 9).q(13, 9, 'power').brick(14, 9);
     b.coins(18, 12, 4).enemy('grumblet', 20).enemy('grumblet', 26);
-    b.spikes(30, 3).arc(29, 11, 5, 3).spikes(38, 2);
+    b.sign(25, { en: 'Hold B + A for long jumps', zh: '长距离：按住 B 加速，再按住 A' });
+    b.spikes(30, 2).arc(29, 11, 5, 3).spikes(38, 2);
     b.plat(40, 9, 3).coins(40, 8, 3).arc(44, 11, 6, 3);
     b.enemy('bat', 56, 2).enemy('bat', 62, 2);
     // low tunnel: solid rock from the cave roof down to row 10, rows 11-12 stay open (2 tiles tall)

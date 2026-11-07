@@ -1,0 +1,308 @@
+{
+  "level": 0,
+  "seed": 12345,
+  "note": "Complete original enemies, items and damage; only input actions are replayed. Fixed RNG is test reproducibility, not reduced difficulty.",
+  "path": [
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 43
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 30,
+      "f": 62
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 82
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 43
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 56
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 33
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 77
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 33
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 41
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 18,
+      "f": 40
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 35
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 39
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 58
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 18,
+      "f": 32
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 33
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 18,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 18,
+      "f": 71
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 22
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 45
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 5,
+      "f": 94
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 35
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 35
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 37
+    },
+    {
+      "dir": 1,
+      "run": true,
+      "jump": true,
+      "hold": 30,
+      "f": 66
+    },
+    {
+      "dir": 1,
+      "run": false,
+      "jump": true,
+      "hold": 5,
+      "f": 14
+    }
+  ]
+}

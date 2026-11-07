@@ -6,6 +6,8 @@ node_modules/
 tools/paths.json
 tools/*.png
 tools/package-lock.json
+playtest-frames/
+**/playtest-frames/
 
 # local screenshots / scratch
 *.log
